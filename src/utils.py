@@ -9,7 +9,7 @@ import webbrowser
 from urllib.parse import urlparse, parse_qs
 from msal import ConfidentialClientApplication
 from azure.identity import DefaultAzureCredential
-
+import os
 GRAPH_SCOPE = "https://graph.microsoft.com/.default"
 
 def get_token():
@@ -18,14 +18,13 @@ def get_token():
     return token.token
 
 
-TENANT_ID = "cbda322f-63a9-4608-982d-be7665a1e883"
-CLIENT_ID = "46b84c6c-cc21-473f-9997-50de1b1167fe"
-CLIENT_SECRET = "YXy8Q~OsI1R~fZokw69Cgm54etoPRHqv6OiYLdol"
+TENANT_ID = os.getenv("TENANT_ID")
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 AUTHORITY = f"https://login.microsoftonline.com/{TENANT_ID}"
-REDIRECT_URI = "http://localhost:8000/callback"  # must match Azure app registration
-SCOPES = ["User.Read", "Mail.ReadWrite"]
+REDIRECT_URI = "http://localhost:8000/callback"  
 GRAPH_API = "https://graph.microsoft.com/v1.0/me"
-
+SCOPES = ["User.Read", "Mail.ReadWrite"]
 
 def get_token_via_browser():
     # Step 1: Generate the auth URL and open it
