@@ -13,7 +13,7 @@ START_DATE = datetime.date(2025, 6, 1)
 EMAIL = "r3finance@nsbe.org"
 STORAGE_ACCOUNT_NAME = os.getenv('STORAGE_ACCOUNT_NAME')
 CONTAINER_NAME = "previous-emails"
-BLOB_NAME = "emails.csv"
+BLOB_NAME = "email-example-uploader"
 
 # Get storage account name from settings
 account_url = f"https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net"
