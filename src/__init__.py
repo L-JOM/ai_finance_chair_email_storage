@@ -18,7 +18,14 @@ BLOB_NAME = "jurmain_emails.csv"
 # Get storage account name from settings
 account_url = f"https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net"
 credential = DefaultAzureCredential()
-blob_service_client = BlobServiceClient(account_url, credential=credential)
+
+connection_string = os.getenv("AzureWebJobsStorage")
+
+blob_service_client = BlobServiceClient.from_connection_string(connection_string)
+
+CONTAINER_NAME = "llm-example-dataset"
+BLOB_NAME = "jurmain_emails.csv"
+
 
 container_name = CONTAINER_NAME
 blob_name = BLOB_NAME
