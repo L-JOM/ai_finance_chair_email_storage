@@ -11,7 +11,7 @@ from utils import create_email_csv
 
 START_DATE = datetime.date(2025, 6, 1)
 EMAIL = "r3finance@nsbe.org"
-STORAGE_ACCOUNT_NAME = os.getenv('STORAGE_ACCOUNT_NAME')
+STORAGE_ACCOUNT_NAME = "projectworkflowae1e"
 CONTAINER_NAME = "previous-emails"
 BLOB_NAME = "email-example-uploader"
 
