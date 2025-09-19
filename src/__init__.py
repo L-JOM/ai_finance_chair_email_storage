@@ -16,7 +16,7 @@ CONTAINER_NAME = "previous-emails"
 BLOB_NAME = "email-example-uploader"
 
 # Get storage account name from settings
-account_url = f"https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net"
+account_url = f"https://aiadvisor1.blob.core.windows.net/llm-example-dataset/jurmain_emails.csv"
 credential = DefaultAzureCredential()
 blob_service_client = BlobServiceClient(account_url, credential=credential)
 
