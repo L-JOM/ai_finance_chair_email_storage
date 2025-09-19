@@ -17,7 +17,6 @@ def get_token():
     token = credential.get_token(GRAPH_SCOPE)
     return token.token
 
-
 TENANT_ID = os.getenv("TENANT_ID")
 CLIENT_ID = os.getenv("CLIENT_ID")
 CLIENT_SECRET = os.getenv("CLIENT_SECRET")
