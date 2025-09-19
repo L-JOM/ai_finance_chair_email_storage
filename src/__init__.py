@@ -11,9 +11,10 @@ from utils import create_email_csv
 
 START_DATE = datetime.date(2025, 6, 1)
 EMAIL = "r3finance@nsbe.org"
-STORAGE_ACCOUNT_NAME = "projectworkflowae1e"
+STORAGE_ACCOUNT_NAME = "aiadvisor1"
 CONTAINER_NAME = "llm-example-dataset"
 BLOB_NAME = "jurmain_emails.csv"
+
 # Get storage account name from settings
 account_url = f"https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net"
 credential = DefaultAzureCredential()
