@@ -15,7 +15,7 @@ STORAGE_ACCOUNT_NAME = "projectworkflowae1e"
 CONTAINER_NAME = "llm-example-dataset"
 BLOB_NAME = "jurmain_emails.csv"
 # Get storage account name from settings
-account_url = f"https://aiadvisor1.blob.core.windows.net/llm-example-dataset/jurmain_emails.csv"
+account_url = f"https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net"
 credential = DefaultAzureCredential()
 blob_service_client = BlobServiceClient(account_url, credential=credential)
 
